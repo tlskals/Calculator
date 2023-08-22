@@ -8,12 +8,13 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvInput"
         android:layout_width="match_parent"
         android:layout_height="250dp"
         android:background="@color/light_grey"
         android:gravity="end|bottom"
         android:padding="10dp"
-        android:text="@string/calc_text"
+
         android:textSize="48sp" />
 
     <LinearLayout
@@ -166,17 +167,26 @@
             android:id="@+id/btnZero"
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="2"
+            android:layout_weight="1"
             android:onClick="onDigit"
             style="@style/MyButtonStyle"
             android:text="@string/_0"/>
+        <Button
+            android:layout_margin="2dp"
+            android:id="@+id/btnDot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDecimalPoint"
+            style="@style/MyButtonStyle"
+            android:text="@string/dot"/>
         <Button
             android:layout_margin="2dp"
             android:id="@+id/btnCLR"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onClear"
             style="@style/MyButtonStyle"
             android:text="@string/clr"/>
         <Button
@@ -205,6 +215,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="onDigit"
+            style="@style/MyButtonStyle"
             android:text="@string/equal"/>
 
 
