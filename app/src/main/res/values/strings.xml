@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MyCalculator</string>
+    <string name="app_name">간이계산기</string>
     <string name="calc_text">0</string>
     <string name="_9">9</string>
     <string name="Divide">/</string>
