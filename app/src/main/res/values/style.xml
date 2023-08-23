@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="MyButtonStyle" parent="Widget.AppCompat.Button">
-        <item name="android:background">@color/gray</item>
+        <item name="android:background">@drawable/rounded_button_background</item>
         <!-- Add other attributes to define button style -->
     </style>
 </resources>
