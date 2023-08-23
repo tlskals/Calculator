@@ -10,18 +10,19 @@ import android.widget.Toast
 class MainActivity : AppCompatActivity() {
 
     private var tvInput: TextView? = null
-    var lastNumeric : Boolean = false
-    var lastDot : Boolean = false
+    var lastNumeric: Boolean = false
+    var lastDot: Boolean = false
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         tvInput = findViewById(R.id.tvInput)
     }
 
-    fun onDigit(view:View) {
+    fun onDigit(view: View) {
         tvInput?.append((view as Button).text)
         lastNumeric = true
         lastDot = false
+
     }
 
     fun onClear(view: View) {
@@ -37,4 +38,26 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    fun onOperator(view: View) {
+        tvInput?.text?.let {
+
+            if (lastNumeric && !isOperatorAdded(it.toString())) {
+                tvInput?.append((view as Button).text)
+                lastNumeric = false
+                lastDot = false
+            }}
+    }
+
+    private fun isOperatorAdded(value: String): Boolean {
+        return if (value.startsWith("-")) {
+            false
+        } else {
+            value.contains("/")
+                    || value.contains("*")
+                    || value.contains("+")
+                    || value.contains("-")
+        }
+    }
+
 }

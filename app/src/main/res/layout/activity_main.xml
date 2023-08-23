@@ -49,7 +49,7 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:onClick="onDigit"
-            style="@style/MyButtonStyle"
+            android:background="@color/gray"
             android:text="@string/_9"/>
         <Button
             android:layout_margin="2dp"
@@ -57,7 +57,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             style="@style/MyButtonStyle"
             android:text="@string/Divide"/>
 
@@ -103,7 +103,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             style="@style/MyButtonStyle"
             android:text="@string/Multiply"/>
 
@@ -149,7 +149,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             style="@style/MyButtonStyle"
             android:text="@string/minus"/>
 
@@ -195,7 +195,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onOperator"
             style="@style/MyButtonStyle"
             android:text="@string/plus"/>
 
